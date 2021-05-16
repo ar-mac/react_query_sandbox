@@ -11,3 +11,16 @@
   justify-content: space-evenly;
   margin-bottom: 2rem;
 }
+
+.NavLink {
+  color: #000;
+  text-decoration: none;
+}
+.ActiveNavLink {
+  color: #00A19C;
+  font-weight: bold;
+}
+/*color: isCurrent ? "#00A19C" : "#000", textDecoration: 'none', fontWeight: isCurrent ? "bold" : "normal"*/
+.UserListItem {
+  list-style-type: none;
+}

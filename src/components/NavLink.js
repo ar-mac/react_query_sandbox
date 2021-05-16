@@ -1,12 +1,13 @@
-import { Link } from "@reach/router";
+import { Link } from '@reach/router'
+import cn from 'classnames'
 
-const NavLink = props => (
+const NavLink = (props) => (
   <Link
     {...props}
     getProps={({ isCurrent }) => ({
-      style: { color: isCurrent ? "#00A19C" : "#000" }
+      className: cn('NavLink', { ActiveNavLink: isCurrent }),
     })}
   />
-);
+)
 
 export default NavLink
