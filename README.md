@@ -2,6 +2,8 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+To start the app run `yarn start` and `yarn start:server`
+
 Things to explore in this app.
 
 * [x] Setup and implement basic use of react-query
