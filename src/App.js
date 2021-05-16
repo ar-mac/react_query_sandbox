@@ -1,25 +1,26 @@
-import logo from './logo.svg';
-import './App.css';
+import './App.css'
+import { Router } from '@reach/router'
+import NavLink from './components/NavLink'
+import View1 from './components/View1'
+import View2 from './components/View2'
+import NotFound from './components/NotFound'
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <nav className="Nav">
+        <NavLink to="/">View 1</NavLink>
+        <NavLink to="/view1">View 1 on different route</NavLink>
+        <NavLink to="/view2">View 2</NavLink>
+      </nav>
+      <Router>
+        <View1 path="/" />
+        <View1 path="/view1" />
+        <View2 path="/view2" />
+        <NotFound default />
+      </Router>
     </div>
-  );
+  )
 }
 
-export default App;
+export default App
